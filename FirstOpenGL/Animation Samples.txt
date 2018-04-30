@@ -1,0 +1,76 @@
+SERIAL COMMANDS
+{
+serial MoveToByTime.lua ( 5 10 0 0 6 1 1 ) MoveTheTeapot
+serial MoveToByTime.lua ( 5 -10 0 0 6 1 1 ) MoveTheTeapotBack
+}
+
+PARALLEL COMMANDS
+{
+parallel MoveToByTime.lua ( 5 10 0 0 6 1 1 ) MoveTheTeapot
+parallel RotateByTime.lua ( 5 0 720 0 6 1 1 ) RotateTheTeapot
+}
+
+SERIAL COMMAND GROUPS
+{
+serial {
+parallel MoveToByTime.lua ( 5 10 0 0 6 1 1 ) MoveTheTeapot
+parallel RotateByTime.lua ( 5 0 720 0 6 1 1 ) RotateTheTeapot
+parallel MoveToByTime.lua ( 6 -10 0 0 10 1 1 ) MoveTheOtherTeapot
+}
+serial {
+parallel MoveToByTime.lua ( 5 10 10 0 6 3 1 ) GoingUp
+parallel RotateByTime.lua ( 5 0 720 0 6 1 1 ) RotateUp
+parallel MoveToByTime.lua ( 6 -10 10 0 6 1 1 ) AlsoGoingUp
+parallel RotateByTime.lua ( 6 0 720 0 6 1 1 ) AlsoRotateUp
+}
+}
+
+PARALLEL COMMAND GROUPS + BEZIER CURVE
+{
+parallel {
+serial MoveToByTime.lua ( 5 10 0 0 3 1 1 ) MoveTheTeapot
+serial FollowCurveByTime.lua ( 5 -10 0 0 6 3 0 3 3 0 6 ) CurveItToTheLeft
+serial RotateByTime.lua ( 5 0 1080 0 6 1 1 ) SpinForGoodMeasure
+}
+parallel {
+serial MoveToByTime.lua ( 6 -10 0 0 7 1 1 ) MoveTheOtherTeapot
+serial FollowCurveByTime.lua ( 6 10 0 0 3 -3 0 6 -3 0 6 ) CurveItToTheRight
+}
+}
+
+FOLLOW EXAMPLE + PARALLEL COMMAND GROUP
+{
+parallel {
+serial MoveToByTime.lua ( 5 10 0 0 6 1 1 ) MoveTheTeapot
+serial MoveToByTime.lua ( 5 -10 0 0 6 1 1 ) MoveTheTeapotBack
+serial MoveToByTime.lua ( 5 10 4 0 6 1 1 ) MoveTheTeapotUp
+}
+parallel RotateByTime.lua ( 5 0 1080 0 10 1 1 ) RotateTheTeapot
+parallel FollowObject.lua ( 6 5 1 3 2 ) FollowThatTeapot
+}
+
+NESTED COMMAND GROUPS
+{
+parallel {
+serial {
+parallel MoveToByTime.lua ( 5 10 0 0 6 1 1 ) MoveTheTeapot
+parallel RotateByTime.lua ( 5 0 720 0 6 1 1 ) RotateTheTeapot
+}
+serial {
+parallel MoveToByTime.lua ( 5 -10 0 0 6 1 1 ) MoveTheTeapotBack
+parallel RotateByTime.lua ( 5 0 -720 0 6 1 1 ) RotateTheTeapotAgain
+}
+serial RotateByTime.lua ( 5 1080 1080 1080 4 1 1 ) RotateTheTeapotAlot
+}
+parallel {
+serial {
+parallel MoveToByTime.lua ( 6 -10 0 0 10 1 1 ) MoveTheOtherTeapot
+parallel RotateByTime.lua ( 6 180 0 180 8 1 3 ) SpinItAFunnyWay
+}
+serial FollowCurveByTime.lua ( 6 10 0 0 3 -3 0 6 -3 0 6 ) CurveItToTheRight
+}
+serial {
+parallel MoveToByTime.lua ( 5 -10 0 -100 6 2 1 ) GoAwayForever
+parallel MoveToByTime.lua ( 6 10 0 -100 8 2 1 ) AlsoGoAway
+}
+}

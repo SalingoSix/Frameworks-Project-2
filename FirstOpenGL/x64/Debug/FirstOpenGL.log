@@ -1,0 +1,69 @@
+﻿  Utilities.cpp
+  TheMain.cpp
+  CTextureFromBMP.cpp
+  cBasicTextureManager.cpp
+  C24BitBMPpixel.cpp
+  Render.cpp
+  CVector3f.cpp
+  CStringHelper.cpp
+  CPlyFile5nt_experimental.cpp
+  CPlyFile5nt.cpp
+  LoadObjectsIntoScene.cpp
+  CLightDescription.cpp
+  CGLColourHelper.cpp
+  key_callback.cpp
+  GlobalStuff.cpp
+  cShaderManager.cpp
+  cShader.cpp
+  cParticleEmitter.cpp
+  cMeshTypeManager.cpp
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cmeshtypemanager.cpp(351): warning C4312: 'reinterpret_cast': conversion from 'int' to 'void *' of greater size
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cmeshtypemanager.cpp(360): warning C4312: 'reinterpret_cast': conversion from 'int' to 'void *' of greater size
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cmeshtypemanager.cpp(368): warning C4312: 'reinterpret_cast': conversion from 'int' to 'void *' of greater size
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cmeshtypemanager.cpp(376): warning C4312: 'reinterpret_cast': conversion from 'int' to 'void *' of greater size
+  cLuaBrain.cpp
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(124): warning C4244: 'initializing': conversion from 'lua_Number' to 'int', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(138): warning C4244: '=': conversion from 'lua_Number' to 'float', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(139): warning C4244: '=': conversion from 'lua_Number' to 'float', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(140): warning C4244: '=': conversion from 'lua_Number' to 'float', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(141): warning C4244: '=': conversion from 'lua_Number' to 'float', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(142): warning C4244: '=': conversion from 'lua_Number' to 'float', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(143): warning C4244: '=': conversion from 'lua_Number' to 'float', possible loss of data
+c:\users\alexm\documents\game development - advanced programming 2017\game enginer frameworks and patterns\3.graphics_lua_basicintegration\firstopengl\cluabrain.cpp(158): warning C4244: 'initializing': conversion from 'lua_Number' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  CHRTimer.cpp
+  cGameObject.cpp
+  Generating Code...
+  glad.c
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_close referenced in function "public: __cdecl cLuaBrain::~cLuaBrain(void)" (??1cLuaBrain@@QEAA@XZ)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_settop referenced in function "public: void __cdecl cLuaBrain::Update(float)" (?Update@cLuaBrain@@QEAAXM@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_tonumberx referenced in function "public: static int __cdecl cLuaBrain::l_GetObjectState(struct lua_State *)" (?l_GetObjectState@cLuaBrain@@SAHPEAUlua_State@@@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_tolstring referenced in function "public: void __cdecl cLuaBrain::Update(float)" (?Update@cLuaBrain@@QEAAXM@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_pushnumber referenced in function "public: static int __cdecl cLuaBrain::l_GetObjectState(struct lua_State *)" (?l_GetObjectState@cLuaBrain@@SAHPEAUlua_State@@@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_pushcclosure referenced in function "public: __cdecl cLuaBrain::cLuaBrain(void)" (??0cLuaBrain@@QEAA@XZ)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_pushboolean referenced in function "public: static int __cdecl cLuaBrain::l_GetObjectState(struct lua_State *)" (?l_GetObjectState@cLuaBrain@@SAHPEAUlua_State@@@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_setglobal referenced in function "public: __cdecl cLuaBrain::cLuaBrain(void)" (??0cLuaBrain@@QEAA@XZ)
+cLuaBrain.obj : error LNK2019: unresolved external symbol lua_pcallk referenced in function "public: void __cdecl cLuaBrain::Update(float)" (?Update@cLuaBrain@@QEAAXM@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol luaL_loadstring referenced in function "public: void __cdecl cLuaBrain::Update(float)" (?Update@cLuaBrain@@QEAAXM@Z)
+cLuaBrain.obj : error LNK2019: unresolved external symbol luaL_newstate referenced in function "public: __cdecl cLuaBrain::cLuaBrain(void)" (??0cLuaBrain@@QEAA@XZ)
+cLuaBrain.obj : error LNK2019: unresolved external symbol luaL_openlibs referenced in function "public: __cdecl cLuaBrain::cLuaBrain(void)" (??0cLuaBrain@@QEAA@XZ)
+key_callback.obj : error LNK2019: unresolved external symbol glfwSetWindowShouldClose referenced in function "void __cdecl key_callback(struct GLFWwindow *,int,int,int,int)" (?key_callback@@YAXPEAUGLFWwindow@@HHHH@Z)
+key_callback.obj : error LNK2019: unresolved external symbol glfwSetWindowTitle referenced in function "void __cdecl key_callback(struct GLFWwindow *,int,int,int,int)" (?key_callback@@YAXPEAUGLFWwindow@@HHHH@Z)
+TheMain.obj : error LNK2019: unresolved external symbol glfwInit referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwTerminate referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwSetErrorCallback referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwWindowHint referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwCreateWindow referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwDestroyWindow referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwWindowShouldClose referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwGetFramebufferSize referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwPollEvents referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwSetKeyCallback referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwGetTime referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwMakeContextCurrent referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwSwapBuffers referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwSwapInterval referenced in function main
+TheMain.obj : error LNK2019: unresolved external symbol glfwGetProcAddress referenced in function main
+lib\Debug\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\alexm\Documents\Game Development - Advanced Programming 2017\Game Enginer Frameworks and Patterns\3.Graphics_Lua_BasicIntegration\x64\Debug\FirstOpenGL.exe : fatal error LNK1120: 29 unresolved externals

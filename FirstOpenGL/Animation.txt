@@ -1,0 +1,24 @@
+{
+parallel {
+serial {
+parallel MoveToByTime.lua ( 5 10 0 0 6 1 1 ) MoveTheTeapot
+parallel RotateByTime.lua ( 5 0 720 0 6 1 1 ) RotateTheTeapot
+}
+serial {
+parallel MoveToByTime.lua ( 5 -10 0 0 6 1 1 ) MoveTheTeapotBack
+parallel RotateByTime.lua ( 5 0 -720 0 6 1 1 ) RotateTheTeapotAgain
+}
+serial RotateByTime.lua ( 5 1080 1080 1080 4 1 1 ) RotateTheTeapotAlot
+}
+parallel {
+serial {
+parallel MoveToByTime.lua ( 6 -10 0 0 10 1 1 ) MoveTheOtherTeapot
+parallel RotateByTime.lua ( 6 180 0 180 8 1 3 ) SpinItAFunnyWay
+}
+serial FollowCurveByTime.lua ( 6 10 0 0 3 -3 0 6 -3 0 6 ) CurveItToTheRight
+}
+serial {
+parallel MoveToByTime.lua ( 5 -10 0 -100 6 2 1 ) GoAwayForever
+parallel MoveToByTime.lua ( 6 10 0 -100 8 2 1 ) AlsoGoAway
+}
+}
